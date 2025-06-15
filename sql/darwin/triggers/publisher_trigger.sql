@@ -1,0 +1,5 @@
+CREATE TRIGGER publisher_trigger
+BEFORE INSERT OR UPDATE 
+ON publisher
+FOR EACH ROW
+EXECUTE FUNCTION updated();

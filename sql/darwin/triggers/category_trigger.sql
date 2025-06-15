@@ -1,0 +1,5 @@
+CREATE TRIGGER category_trigger
+BEFORE INSERT OR UPDATE 
+ON category
+FOR EACH ROW
+EXECUTE FUNCTION updated();

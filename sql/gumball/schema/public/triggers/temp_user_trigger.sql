@@ -1,0 +1,5 @@
+-- CREATE TRIGGER update_temp_user_timestamp
+-- BEFORE UPDATE  
+-- ON temp_user
+-- FOR EACH ROW
+-- EXECUTE FUNCTION update_timestamp();

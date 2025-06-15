@@ -1,0 +1,5 @@
+CREATE TRIGGER translator_trigger
+BEFORE INSERT OR UPDATE
+ON translator
+FOR EACH ROW
+EXECUTE FUNCTION updated();

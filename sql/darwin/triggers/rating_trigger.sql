@@ -1,0 +1,5 @@
+CREATE TRIGGER rating_trigger
+BEFORE INSERT OR UPDATE
+ON rating
+FOR EACH STATEMENT
+EXECUTE FUNCTION rating_is_updated();

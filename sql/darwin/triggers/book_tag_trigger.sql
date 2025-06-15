@@ -1,0 +1,5 @@
+CREATE TRIGGER book_tag_trigger
+BEFORE INSERT OR UPDATE 
+ON book_tag
+FOR EACH STATEMENT
+EXECUTE FUNCTION book_tag_is_updated();
