@@ -9,8 +9,8 @@ BEGIN
         v_updated_at := NEW.updated_at;
     END IF;
 
-    INSERT INTO changes_of_book_tables (table_name, updated_at)
-    VALUES (TG_TABLE_NAME,v_updated_at)
+    INSERT INTO changes_of_book_tables (table_name,book_id, updated_at)
+    VALUES (TG_TABLE_NAME, NEW.book_id, v_updated_at)
     ON CONFLICT (table_name)
     DO UPDATE SET updated_at = v_updated_at;
 

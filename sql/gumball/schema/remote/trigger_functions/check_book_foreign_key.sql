@@ -3,7 +3,7 @@ RETURNS TRIGGER AS $$
 BEGIN
     IF NOT EXISTS (
         SELECT 1 FROM remote.book_info 
-        WHERE book_id = NEW.id
+        WHERE id = NEW.book_id
     ) THEN
         RAISE EXCEPTION 'Foreign key violation: book_id % does not exist', NEW.book_id;
     END IF;
