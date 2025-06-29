@@ -8,7 +8,7 @@ CREATE EXTENSION IF NOT EXISTS postgres_fdw;
 CREATE SERVER darwin_server
 FOREIGN DATA WRAPPER postgres_fdw
 OPTIONS (
-    host '192.168.1.19',
+    host '192.168.1.55',
     port '5432',  -- default PostgreSQL port
     dbname 'Alex-DB'
 );
