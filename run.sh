@@ -1,85 +1,86 @@
-# #!/bin/bash
+#!/bin/bash
 
-# # Database connection parameters
-# DB_HOST=${DB_HOST:-"gumball-shehabhesham292-e2f9.k.aivencloud.com"}  # Default to localhost if not set
-# DB_PORT=${DB_PORT:-"22468"}      # Default PostgreSQL port
-# DB_USER=${DB_USER:-"avnadmin"}   # Default PostgreSQL superuser
-# DB_NAME=${DB_NAME:-"Gumball"}    # Default database name
-# DB_PASSWORD=${DB_PASSWORD:-"AVNS_LiwkL4bEX_pLy6x0UFL"}  # Fallback password
+# Database connection parameters
+DB_HOST=${DB_HOST:-"4.227.202.127"}  # Default to localhost if not set
+DB_PORT=${DB_PORT:-"5432"}      # Default PostgreSQL port
+DB_USER=${DB_USER:-"postgres"}   # Default PostgreSQL superuser
+DB_NAME=${DB_NAME:-"gumball"}    # Default database name
+DB_PASSWORD=${DB_PASSWORD:-"a26(7K08t1p_"}  # Fallback password
 
-# # Export password for psql
-# export PGPASSWORD=$DB_PASSWORD
+# Export password for psql
+export PGPASSWORD=$DB_PASSWORD
 
-# FILES=(
-#   # 1 - Drop all tables
-#   "gumball/drop_all.sql"
-#   # 2 - Create remote schema
-#   "gumball/schema/remote/creation.sql"
-#   # 3 - Create foreign data wrapper
-#   "gumball/connection/foreign_data_wrapper/darwin_server.sql"
-#   # 4 - Create tables in remote schema
-#   "gumball/schema/remote/tables/user.sql"
-#   "gumball/schema/remote/tables/book_info.sql"
-#   # 5 - Create trigger functions in remote schema
-#   "gumball/schema/remote/trigger_functions/check_user_foreign_key.sql"
-#   "gumball/schema/remote/trigger_functions/check_book_foreign_key.sql"
-#   # 6 - Create tables in public schema (order matters)
-#   "gumball/schema/public/tables/changes_of_book_table.sql"
-#   "gumball/schema/public/tables/changes_of_general_tables.sql"
-#   "gumball/schema/public/tables/changes_of_user_book_tables.sql"
-#   "gumball/schema/public/tables/changes_of_user_tables.sql"
-#   "gumball/schema/public/tables/annotations.sql"
-#   "gumball/schema/public/tables/bookmark.sql"
-#   "gumball/schema/public/tables/highlight.sql"
-#   "gumball/schema/public/tables/note.sql"
-#   "gumball/schema/public/tables/set.sql"
-#   "gumball/schema/public/tables/set_content.sql"
-#   "gumball/schema/public/tables/book_metadata.sql"
-#   "gumball/schema/public/tables/temp_user.sql"
-#   "gumball/schema/public/tables/otp.sql"
-#   "gumball/schema/public/tables/reading_progress.sql"
-#   "gumball/schema/public/tables/saved_book.sql"
-#   "gumball/schema/public/tables/token.sql"
-#   # 7 - Create foreign key triggers in public schema
-#   "gumball/schema/public/triggers/fks_trigger/annotations_fks.sql"
-#   "gumball/schema/public/triggers/fks_trigger/book_metadata_fks.sql"
-#   "gumball/schema/public/triggers/fks_trigger/changes_of_book_tables.sql"
-#   "gumball/schema/public/triggers/fks_trigger/changes_of_user_book_tables.sql"
-#   "gumball/schema/public/triggers/fks_trigger/changes_of_user_tables_fks.sql"
-#   "gumball/schema/public/triggers/fks_trigger/reading_progress_fks.sql"
-#   "gumball/schema/public/triggers/fks_trigger/saved_book_fks.sql"
-#   "gumball/schema/public/triggers/fks_trigger/set_content.fks.sql"
-#   "gumball/schema/public/triggers/fks_trigger/set_fks.sql"
-#   "gumball/schema/public/triggers/fks_trigger/token_fks.sql"
-#   # 9 - Create trigger functions in public schema
-#   "gumball/schema/public/trigger_functions/update_changes_of_book_tables.sql"
-#   "gumball/schema/public/trigger_functions/update_changes_of_user_book_tables.sql"
-#   "gumball/schema/public/trigger_functions/update_changes_of_user_tables.sql"
-#   "gumball/schema/public/trigger_functions/update_timestamp.sql"
-#   # 8 - Create trigger in public schema
-#   "gumball/schema/public/triggers/book_metadata_trigger.sql"
-#   "gumball/schema/public/triggers/bookmark_trigger.sql"
-#   "gumball/schema/public/triggers/highlight_trigger.sql"
-#   "gumball/schema/public/triggers/note_trigger.sql"
-#   "gumball/schema/public/triggers/otp_trigger.sql"
-#   "gumball/schema/public/triggers/reading_progress_trigger.sql"
-#   "gumball/schema/public/triggers/saved_book_trigger.sql"
-#   "gumball/schema/public/triggers/set_content_trigger.sql"
-#   "gumball/schema/public/triggers/set_trigger.sql"
-#   "gumball/schema/public/triggers/temp_user_trigger.sql"
-#   "gumball/schema/public/triggers/token_trigger.sql"
-# )
+FILES=(
+  # 1 - Drop all tables
+  "gumball/drop_all.sql"
+  # 2 - Create remote schema
+  "gumball/schema/remote/creation.sql"
+  # 3 - Create foreign data wrapper
+  "gumball/connection/foreign_data_wrapper/darwin_server.sql"
+  # 4 - Create tables in remote schema
+  "gumball/schema/remote/tables/user.sql"
+  "gumball/schema/remote/tables/book_info.sql"
+  # 5 - Create trigger functions in remote schema
+  "gumball/schema/remote/trigger_functions/check_user_foreign_key.sql"
+  "gumball/schema/remote/trigger_functions/check_book_foreign_key.sql"
+  # 6 - Create tables in public schema (order matters)
+  "gumball/schema/public/tables/changes_of_book_table.sql"
+  "gumball/schema/public/tables/changes_of_general_tables.sql"
+  "gumball/schema/public/tables/changes_of_user_book_tables.sql"
+  "gumball/schema/public/tables/changes_of_user_tables.sql"
+  "gumball/schema/public/tables/annotations.sql"
+  "gumball/schema/public/tables/bookmark.sql"
+  "gumball/schema/public/tables/highlight.sql"
+  "gumball/schema/public/tables/note.sql"
+  "gumball/schema/public/tables/set.sql"
+  "gumball/schema/public/tables/set_content.sql"
+  "gumball/schema/public/tables/book_metadata.sql"
+  "gumball/schema/public/tables/temp_user.sql"
+  "gumball/schema/public/tables/otp.sql"
+  "gumball/schema/public/tables/reading_progress.sql"
+  "gumball/schema/public/tables/saved_book.sql"
+  "gumball/schema/public/tables/token.sql"
+  # 7 - Create foreign key triggers in public schema
+  "gumball/schema/public/triggers/fks_trigger/annotations_fks.sql"
+  "gumball/schema/public/triggers/fks_trigger/book_metadata_fks.sql"
+  "gumball/schema/public/triggers/fks_trigger/changes_of_book_tables.sql"
+  "gumball/schema/public/triggers/fks_trigger/changes_of_user_book_tables.sql"
+  "gumball/schema/public/triggers/fks_trigger/changes_of_user_tables_fks.sql"
+  "gumball/schema/public/triggers/fks_trigger/reading_progress_fks.sql"
+  "gumball/schema/public/triggers/fks_trigger/saved_book_fks.sql"
+  "gumball/schema/public/triggers/fks_trigger/set_content.fks.sql"
+  "gumball/schema/public/triggers/fks_trigger/set_fks.sql"
+  "gumball/schema/public/triggers/fks_trigger/token_fks.sql"
+  # 9 - Create trigger functions in public schema
+  "gumball/schema/public/trigger_functions/update_changes_of_book_tables.sql"
+  "gumball/schema/public/trigger_functions/update_changes_of_user_book_tables.sql"
+  "gumball/schema/public/trigger_functions/update_changes_of_user_tables.sql"
+  "gumball/schema/public/trigger_functions/update_timestamp.sql"
+  # 8 - Create trigger in public schema
+  "gumball/schema/public/triggers/book_metadata_trigger.sql"
+  "gumball/schema/public/triggers/bookmark_trigger.sql"
+  "gumball/schema/public/triggers/highlight_trigger.sql"
+  "gumball/schema/public/triggers/note_trigger.sql"
+  "gumball/schema/public/triggers/otp_trigger.sql"
+  "gumball/schema/public/triggers/reading_progress_trigger.sql"
+  "gumball/schema/public/triggers/saved_book_trigger.sql"
+  "gumball/schema/public/triggers/set_content_trigger.sql"
+  "gumball/schema/public/triggers/set_trigger.sql"
+  "gumball/schema/public/triggers/temp_user_trigger.sql"
+  "gumball/schema/public/triggers/token_trigger.sql"
+)
 
-# # Exit on error
-# set -e
+# Exit on error
+set -e
 
-# # Execute each file
-# for file in "${FILES[@]}"; do
-#   echo "Executing $file..."
-#   psql -h $DB_HOST -p $DB_PORT -U $DB_USER -d $DB_NAME -f "sql/$file"
-# done
+# Execute each file
+for file in "${FILES[@]}"; do
+  echo "Executing $file..."
+  psql -h $DB_HOST -p $DB_PORT -U $DB_USER -d $DB_NAME -f "sql/$file"
+done
 
-# # Unset the password for security
-# unset PGPASSWORD
+# Unset the password for security
+unset PGPASSWORD
 
-# echo "All SQL files executed successfully."
+echo "All SQL files executed successfully."
+

@@ -8,15 +8,15 @@ CREATE EXTENSION IF NOT EXISTS postgres_fdw;
 CREATE SERVER darwin_server
 FOREIGN DATA WRAPPER postgres_fdw
 OPTIONS (
-    host '192.168.1.55',
+    host '4.227.202.127',
     port '5432',  -- default PostgreSQL port
-    dbname 'Alex-DB'
+    dbname 'darwin'  -- name of the remote database
 );
 
 -- 3. Create user mapping with remote credentials
 CREATE USER MAPPING FOR CURRENT_USER
 SERVER darwin_server
 OPTIONS (
-    user 'odoo',
-    password '123456'
+    user 'postgres',
+    password 'a26(7K08t1p_'
 );

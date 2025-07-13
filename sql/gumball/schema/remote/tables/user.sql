@@ -9,7 +9,7 @@ CREATE FOREIGN TABLE remote.res_partner (
     phone_code_selection character varying(255),
     mobile character varying(255),
     -- user_password_hash TEXT NULL,
-    -- registration_type registration_type_enum  NOT NULL,
+    registration_type Text  NOT NULL,
     create_date timestamp without time zone,
     write_date timestamp without time zone
 )
