@@ -58,9 +58,10 @@ FILES=(
   "gumball/schema/public/trigger_functions/update_timestamp.sql"
   # 8 - Create trigger in public schema
   "gumball/schema/public/triggers/book_metadata_trigger.sql"
-  "gumball/schema/public/triggers/bookmark_trigger.sql"
-  "gumball/schema/public/triggers/highlight_trigger.sql"
-  "gumball/schema/public/triggers/note_trigger.sql"
+  # "gumball/schema/public/triggers/bookmark_trigger.sql"
+  # "gumball/schema/public/triggers/highlight_trigger.sql"
+  # "gumball/schema/public/triggers/note_trigger.sql"
+  "gumball/schema/public/triggers/annotation_trigger.sql"
   "gumball/schema/public/triggers/otp_trigger.sql"
   "gumball/schema/public/triggers/reading_progress_trigger.sql"
   "gumball/schema/public/triggers/saved_book_trigger.sql"
