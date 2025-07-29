@@ -13,7 +13,7 @@ CREATE TABLE temp_user(
     "registration_type" registration_type_enum  NOT NULL,
     "created_at" TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY ("email"),
-    UNIQUE ("phone"),
+    -- UNIQUE ("phone"),
     CHECK (LENGTH("name") BETWEEN 2 AND 100),
     CHECK (email ~ '^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'),
     CHECK (country_code is NULL OR country_code ~ '^\+\d{1,3}$'),  -- started with + and 1 to 3 digits

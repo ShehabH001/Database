@@ -7,6 +7,7 @@ CREATE TABLE "highlight"(
     "color" INTEGER NOT NULL,
     "page_number" INTEGER NOT NULL,
     "chapter_number" INTEGER NOT NULL,
+    "page_number_in_chapter" INTEGER NOT NULL,
     "created_at" TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     "updated_at" TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     -- "is_deleted" boolean DEFAULT FALSE NOT NULL,
@@ -15,6 +16,7 @@ CREATE TABLE "highlight"(
         FOREIGN KEY (annotation_id) REFERENCES annotation (id)
         ON DELETE CASCADE  
         ON UPDATE CASCADE,
+    UNIQUE (annotation_id, start_index, end_index, page_number_in_chapter, chapter_number),
     CHECK (start_index >= 0),
     CHECK (end_index >= start_index),
     CHECK (page_number >= 0),

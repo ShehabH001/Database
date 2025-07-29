@@ -9,9 +9,9 @@ BEGIN
         v_updated_at := NEW.updated_at;
     END IF;
 
-    INSERT INTO changes_of_book_tables (table_name,book_id, updated_at)
+    INSERT INTO changes_of_book_tables (table_name, book_id, updated_at)
     VALUES (TG_TABLE_NAME, NEW.book_id, v_updated_at)
-    ON CONFLICT (table_name)
+    ON CONFLICT (table_name, book_id)
     DO UPDATE SET updated_at = v_updated_at;
 
     IF TG_OP = 'DELETE' THEN

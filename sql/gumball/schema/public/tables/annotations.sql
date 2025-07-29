@@ -1,8 +1,3 @@
-DROP TABLE IF EXISTS "bookmark";
-DROP TABLE IF EXISTS "highlight";
-DROP TABLE IF EXISTS "note";
-DROP TABLE IF EXISTS "annotation";
-
 CREATE TABLE "annotation"(
     "id" SERIAL NOT NULL,
     "user_id" INTEGER NOT NULL,

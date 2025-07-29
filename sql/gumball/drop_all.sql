@@ -2,14 +2,16 @@
 DROP TRIGGER IF EXISTS update_book_metadata_timestamp on book_metadata;
 DROP TRIGGER IF EXISTS book_metadata_is_updated on book_metadata;
 
-DROP TRIGGER IF EXISTS update_bookmark_timestamp on bookmark;
-DROP TRIGGER IF EXISTS bookmark_is_updated on bookmark;
+-- DROP TRIGGER IF EXISTS update_bookmark_timestamp on bookmark;
+-- DROP TRIGGER IF EXISTS bookmark_is_updated on bookmark;
 
-DROP TRIGGER IF EXISTS update_highlight_timestamp on highlight;
-DROP TRIGGER IF EXISTS highlight_is_updated on highlight;
+-- DROP TRIGGER IF EXISTS update_highlight_timestamp on highlight;
+-- DROP TRIGGER IF EXISTS highlight_is_updated on highlight;
 
-DROP TRIGGER IF EXISTS update_note_timestamp on note;
-DROP TRIGGER IF EXISTS note_is_updated on note;
+-- DROP TRIGGER IF EXISTS update_note_timestamp on note;
+-- DROP TRIGGER IF EXISTS note_is_updated on note;]
+
+DROP TRIGGER IF EXISTS update_annotation_timestamp on annotation;
 
 DROP TRIGGER IF EXISTS update_otp_timestamp on otp;
 

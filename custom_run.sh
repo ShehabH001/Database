@@ -11,11 +11,7 @@ DB_PASSWORD=${DB_PASSWORD:-"a26(7K08t1p_"}  # Fallback password
 export PGPASSWORD=$DB_PASSWORD
 
 FILES=(
-  "gumball/schema/public/tables/annotations.sql"
-  "gumball/schema/public/tables/bookmark.sql"
-  "gumball/schema/public/tables/highlight.sql"
-  "gumball/schema/public/tables/note.sql"
-  "gumball/schema/public/triggers/annotation_trigger.sql"
+    "gumball/schema/public/tables/temp_user.sql"
 )
 
 # Exit on error

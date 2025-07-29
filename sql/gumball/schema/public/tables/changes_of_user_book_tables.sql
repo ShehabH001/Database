@@ -3,6 +3,5 @@ CREATE TABLE changes_of_user_book_tables (
     "user_id" INTEGER NOT NULL,
     "book_id" INTEGER NOT NULL,
     "updated_at" TIMESTAMP NOT NULL,
-    UNIQUE ("table_name"),
     PRIMARY KEY ("table_name", "user_id", "book_id")
 );
